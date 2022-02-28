@@ -17,10 +17,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 io.on("connection", socket => {
     socket.on("message", msg => {
-        console.log(msg);
+        console.log(`receiving message: '${msg}'`);
 
-        socket.emit("message", "Hello Client");
-        socket.broadcast.emit("message", "Hello other Clients");
-        io.emit("message", "Hello Everyone");
+        io.emit("message", msg);
     });
 });

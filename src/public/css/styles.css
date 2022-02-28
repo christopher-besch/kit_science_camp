@@ -1,0 +1,28 @@
+body {
+    padding-bottom: 10px;
+}
+#messages::after {
+    /* clear floats afterwards */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.message {
+    width: 60%;
+    margin-top: 10px;
+}
+
+.message-left {
+    float: left;
+}
+.message-right {
+    float: right;
+}
+.message-box {
+    width: 100%;
+}
+
+#new-message {
+    margin-top: 10px;
+}

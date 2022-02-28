@@ -1,5 +1,7 @@
 # Chatty Chat Chat
 
+Except for initial boilerplate and some cleanup written in an hour.
+
 ## XSS
 
 ```html

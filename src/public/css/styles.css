@@ -1,6 +1,7 @@
 body {
-    padding-bottom: 10px;
+    padding-bottom: 50px;
 }
+
 #messages::after {
     /* clear floats afterwards */
     content: "";
@@ -12,7 +13,6 @@ body {
     width: 60%;
     margin-top: 10px;
 }
-
 .message-left {
     float: left;
 }
@@ -21,6 +21,10 @@ body {
 }
 .message-box {
     width: 100%;
+}
+
+#name-box {
+    margin-top: 10px;
 }
 
 #new-message {

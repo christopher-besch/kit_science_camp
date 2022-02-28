@@ -5,6 +5,7 @@ function attach_send_button(author) {
     let new_message_input = document.getElementById("new-message-input");
     send_button.onclick = () => {
         let new_message = new_message_input.value;
+        // reset input
         new_message_input.value = "";
         if (new_message == "")
             return;
@@ -33,8 +34,10 @@ function show_new_message(author, msg) {
 }
 
 function setup(name) {
+    // show new message input
     let new_message = document.getElementById("new-message");
     new_message.style.display = "block";
+
     attach_send_button(name);
 
     socket.on("message", msg => {
@@ -44,6 +47,7 @@ function setup(name) {
 }
 
 function get_name() {
+    // hide new message input
     let new_message = document.getElementById("new-message");
     new_message.style.display = "none";
 
@@ -52,6 +56,7 @@ function get_name() {
     let name_button = document.getElementById("name-button");
     name_button.onclick = () => {
         let name = name_input.value;
+        // hide name input
         name_box.style.display = "none";
         console.log(`using name '${name}.`);
         setup(name);
